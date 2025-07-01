@@ -324,8 +324,8 @@ html:focus-within {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("assets/bg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../assets/bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
