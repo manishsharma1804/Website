@@ -1345,183 +1345,189 @@ html:focus-within {
 
 
 
+  /* ====== INTERNAL CARD STYLES ====== */
+  .team-container,
+  .founders-container {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+  }
 
+  .card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+  }
 
+  .card:hover {
+    transform: translateY(-6px);
+  }
 
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-      /* ====== INTERNAL CARD STYLES ====== */
-      .team-container {
-        display: grid;
-        gap: 1.5rem;
-        justify-content: center;
-      }
+  .card-footer {
+    background: white;
+    padding: 1rem;
+    color: #1f2c4c;
+    transition: all 0.3s ease, max-height 0.3s ease;
+    position: relative;
+    max-height: 100px;
+    overflow: hidden;
+  }
 
-      .card {
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s;
-        width: 100%;
-        max-width: 280px;
-        position: relative;
-      }
+  .card:hover .card-footer {
+    max-height: 160px;
+    background: #26398d;
+    color: white;
+  }
 
-      .card:hover {
-        transform: translateY(-6px);
-      }
+  .card-footer h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
 
-      .card img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
+  .card-footer p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
 
-      .card-footer {
-        background: white;
-        padding: 1rem;
-        color: #1f2c4c;
-        transition: all 0.3s ease;
-        position: relative;
-        min-height: 100px;
-      }
+  .extra-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
 
-      .card-footer h3 {
-        margin: 0;
-        font-size: 1.1rem;
-      }
+  .card:hover .extra-info {
+    opacity: 1;
+    max-height: 50px;
+  }
 
-      .card-footer p {
-        margin: 5px 0 0;
-        font-size: 0.9rem;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
+  .linkedin-icon {
+    font-size: 1.2rem;
+  }
 
-      .extra-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
+  .learn-more {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-      .card:hover .extra-info {
-        opacity: 1;
-      }
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+  }
 
-      .card:hover .card-footer {
-        background: #26398d;
-        color: white;
-      }
+  .modal-content {
+    background: white;
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 
-      .card:hover .card-footer p {
-        opacity: 1;
-      }
+  .modal-content img {
+    width: 200px;
+    border-radius: 10px;
+  }
 
-      .linkedin-icon {
-        font-size: 1.2rem;
-      }
+  .modal-text {
+    flex: 1;
+  }
 
-      .learn-more {
-        font-size: 0.9rem;
-        text-decoration: underline;
-        cursor: pointer;
-      }
+  .modal-text h2 {
+    color: #88ce43;
+    margin-bottom: 0;
+  }
 
-      .modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 999;
-        justify-content: center;
-        align-items: center;
-      }
+  .modal-text h4 {
+    margin-top: 5px;
+    color: #666;
+  }
 
-      .modal-content {
-        background: white;
-        max-width: 800px;
-        padding: 2rem;
-        border-radius: 12px;
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
+  .modal-text p {
+    color: #333;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
 
-      .modal-content img {
-        width: 200px;
-        border-radius: 10px;
-      }
+  .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 9999999;
+  }
 
-      .modal-text {
-        flex: 1;
-      }
+  @media (max-width: 767px) {
+    .team-container,
+    .founders-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-      .modal-text h2 {
-        color: #88ce43;
-        margin-bottom: 0;
-      }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .team-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-      .modal-text h4 {
-        margin-top: 5px;
-        color: #666;
-      }
+    .founders-container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+  }
 
-      .modal-text p {
-        color: #333;
-        line-height: 1.5;
-        margin-top: 1rem;
-      }
+  @media (min-width: 1025px) {
+    .founders-container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
 
-      .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-      }
+    .team-container {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
 
-      @media (max-width: 767px) {
-        .team-container {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
+    .card {
+      cursor: pointer;
+    }
 
-      @media (min-width: 768px) and (max-width: 1024px) {
-        .team-container {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
 
-      @media (min-width: 1025px) {
-        .founders-section-inside .team-container {
-          grid-template-columns: repeat(2, 1fr);
-          justify-content: center;
-        }
+    .card .card-footer,
+    .card .card-footer * {
+      position: relative;
+      z-index: 2;
+    }
+  }
 
-        .team:not(.founders-section-inside) .team-container {
-          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-          max-width: 1200px;
-          margin: auto;
-        }
-
-        .card {
-          cursor: pointer;
-        }
-
-        .card::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-        }
-
-        .card .card-footer,
-        .card .card-footer * {
-          position: relative;
-          z-index: 2;
-        }
-      }
