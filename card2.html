@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Section (Green)</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #88ce43;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: white;
+        font-size: 3rem;
+        margin: 2rem 0 1rem;
+      }
+
+      .team-container {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        position: relative;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+        width: 280px;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-footer {
+        padding: 1rem;
+        background: white;
+        color: #1f2c4c;
+        transition: background 0.3s, color 0.3s;
+        position: relative;
+        height: 90px;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .card-footer h3 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .card-footer p {
+        margin: 4px 0 0;
+        font-size: 0.9rem;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .card:hover .card-footer {
+        background: #388e3c; /* green on hover */
+        color: white;
+      }
+
+      .card:hover .card-footer p {
+        opacity: 0;
+      }
+
+      .extra-info {
+        position: absolute;
+        bottom: 10px;
+        left: 1rem;
+        right: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .card:hover .extra-info {
+        opacity: 1;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: white;
+        max-width: 800px;
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 12px;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .modal-content img {
+        width: 200px;
+        border-radius: 8px;
+      }
+
+      .modal-text h2 {
+        color: #88ce43;
+        margin: 0;
+      }
+
+      .modal-text p {
+        color: #1f2c4c;
+        line-height: 1.5;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .modal-content {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Team</h1>
+
+    <div class="team-container">
+      <div
+        class="card"
+        data-name="Siddhant Santani"
+        data-role="Business Analyst"
+        data-detail="Siddhant Santani is a Business Analyst focused on driving data-based decisions for startup operations and scaling strategies. He specializes in BI dashboards and performance optimization."
+      >
+        <img
+          src="https://via.placeholder.com/280x280.png?text=Profile"
+          alt="Siddhant Santani"
+        />
+        <div class="card-footer">
+          <h3>Siddhant Santani</h3>
+          <p>Business Analyst</p>
+          <div class="extra-info">
+            <span class="linkedin-icon">🔗</span>
+            <span class="learn-more">Learn more</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        data-name="Divya Goyel"
+        data-role="Legal and compliance"
+        data-detail="Specializes in legal advisory for startups and growth-stage companies, with focus on funding mandates, term sheets, shareholder agreements, and incorporation. Previously served as Legal Advisor at WE Hub Foundation, ensuring compliance for early-stage ventures and drafting key frameworks including MOUs, employee policies, and POSH guidelines. As an AIF Banyan Impact Fellow, led a Micro Enterprise Incubation Unit supporting women entrepreneurs and helping formalize micro-enterprises within inclusive startup ecosystems. Brings a legal and policy-driven approach to each engagement, helping founders and investors navigate regulatory and operational complexities across early and growth-stage businesses."
+      >
+        <img
+          src="https://via.placeholder.com/280x280.png?text=Profile"
+          alt="Divya Goyel"
+        />
+        <div class="card-footer">
+          <h3>Divya Goyel</h3>
+          <p>Legal and Compliance</p>
+          <div class="extra-info">
+            <span class="linkedin-icon">🔗</span>
+            <span class="learn-more">Learn more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="profileModal">
+      <div class="close-btn" onclick="closeModal()">&times;</div>
+      <div class="modal-content">
+        <img id="modalImg" src="" alt="Profile" />
+        <div class="modal-text">
+          <h2 id="modalName">Name</h2>
+          <h4 id="modalRole">(Role)</h4>
+          <p id="modalDetails">Details</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+      const modal = document.getElementById("profileModal");
+      const modalName = document.getElementById("modalName");
+      const modalRole = document.getElementById("modalRole");
+      const modalDetails = document.getElementById("modalDetails");
+      const modalImg = document.getElementById("modalImg");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          modalName.textContent = card.dataset.name;
+          modalRole.textContent = `(${card.dataset.role})`;
+          modalDetails.textContent = card.dataset.detail;
+          modalImg.src = card.querySelector("img").src;
+          modal.style.display = "flex";
+        });
+      });
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+    </script>
+  </body>
+</html>

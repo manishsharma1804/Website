@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LumenCap | Loader</title>
+  <style>
+    /* ==== LOADER STYLES ==== */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 0.6s ease;
+    }
+
+    #loader.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-logo {
+      font-size: 3rem;
+      font-weight: 900;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4a5fc1;
+      text-align: center;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    .loader-logo .cap {
+      color: #7cb342;
+    }
+
+    .loader-tagline {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #4a5fc1;
+      opacity: 0.8;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 0px rgba(124, 179, 66, 0.0);
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(124, 179, 66, 0.3);
+      }
+    }
+
+    /* Just for demo main content */
+    .main-content {
+      opacity: 0;
+      transition: opacity 0.3s ease 0.6s;
+    }
+
+    body.loaded .main-content {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-logo">
+      <span class="lumen">Lumen</span><span class="cap">Cap</span>
+    </div>
+    <div class="loader-tagline">From Insight to Impact</div>
+  </div>
+
+  <!-- Main Page Content -->
+  <div class="main-content">
+    <section style="padding: 5rem; text-align:center;">
+      <h1>Welcome to LumenCap Ventures</h1>
+      <p>This is your real content.</p>
+    </section>
+  </div>
+
+  <!-- JavaScript for Loader -->
+<script>
+  const loader = document.getElementById('loader');
+
+  // Wait for both page load and 2-second timer
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+      document.body.classList.add('loaded');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 600); // Wait for fade-out to finish
+    }, 2000); // Minimum 2 seconds before hiding
+  });
+</script>
+
+</body>
+</html>
