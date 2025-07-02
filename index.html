@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>LumenCap Ventures - From Insight to Impact</title>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -10,7 +10,8 @@
   <body>
     <!-- Loader -->
     <div id="loader">
-      <img src="assets/logo.png" alt="LumenCap Logo" class="loader-image" />
+      <img src="assets/loader.png" alt="LumenCap Logo" class="loader-brand-logo" />
+      <div class="loader-slogan">From Insight to Impact</div>
     </div>
     <!-- Header -->
     <header class="header">
@@ -28,9 +29,7 @@
           <li><a href="#team">Our Team</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
-        <a href="#contact" class="cta-button cla-button-hide"
-          >Strategic Advisory</a
-        >
+        <a href="#contact" class="cta-button">Strategic Advisory</a>
         <div class="mobile-menu-toggle" id="mobileMenuToggle">
           <span></span>
           <span></span>
@@ -39,9 +38,11 @@
       </nav>
     </header>
 
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-      <span class="mobile-menu-close" id="mobileMenuClose">&times;</span>
       <ul class="nav-menu-mobile">
         <li><a href="#about">Who we are</a></li>
         <li><a href="#services">Our Services</a></li>
@@ -112,41 +113,29 @@
           <div class="sector-grid">
             <div class="sector-card" tabindex="0">
               <div class="sector-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                  <path
-                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 6h-2v2h2v6H7v-2h2v-2H7V7h10v2z"
-                  />
-                </svg>
+                <!-- Hospital/Plus Icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
               </div>
               <h3>Health Care</h3>
             </div>
             <div class="sector-card" tabindex="0">
               <div class="sector-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                  <path
-                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                  />
-                </svg>
+                <!-- Molecule/Hex Icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="2"/><circle cx="17" cy="6" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 12v-2.5L17 6m0 0v6m0-6v6m0 6v-6m0 6l-10-3.5V12"/></svg>
               </div>
               <h3>Life Sciences</h3>
             </div>
             <div class="sector-card" tabindex="0">
               <div class="sector-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                  <path
-                    d="M7 18c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2z"
-                  />
-                </svg>
+                <!-- Cart Icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
               </div>
               <h3>Consumer</h3>
             </div>
             <div class="sector-card" tabindex="0">
               <div class="sector-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
+                <!-- Globe/Cursor Icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/><path d="M17.5 17.5L22 22"/><path d="M15 15l2.5 2.5"/></svg>
               </div>
               <h3>Consumer Internet</h3>
             </div>
@@ -208,29 +197,16 @@
         <h2>Our Team</h2>
         <div class="team-description-content">
           <p>
-            At LumenCap Ventures, we are a boutique investment firm driven by
-            insight, integrity, and a deep commitment to long-term value
-            creation.
+            At LumenCap, our team is the core of what makes us different. With over 25 years of collective experience across investment banking, private equity, and venture capital, we bring a rare combination of institutional discipline and entrepreneurial mindset.<br>
+            We've led M&A deals, structured complex capital raises, and backed high-growth startups — always with a deep focus on value creation and strategic alignment. Our backgrounds span global investment banks, family offices, emerging market funds, and high-impact startups.
           </p>
-
-          <p>
-            What sets us apart is our size by design. As a focused and agile
-            firm, we offer highly personalized investment strategies tailored to
-            the unique goals of each client, whether individuals, family
-            offices, or early-stage ventures.
-          </p>
-
-          <p>
-            We combine rigorous market research with a nuanced understanding of
-            risk, opportunity, and timing. Every portfolio we manage is built
-            with precision and purpose not just to perform, but to align with
-            your broader vision for growth.
-          </p>
-
-          <p>
-            At LumenCap, relationships come first. We believe in transparency,
-            discretion, and delivering results that speak louder than promises.
-          </p>
+          <h4 style="color: #a3d35c; font-weight: 700; margin-top: 2.2rem; margin-bottom: 1rem;">What We Bring:</h4>
+          <ul style="color: #323393; font-size: 1.1rem; margin-left: 1.2rem; margin-bottom: 0;">
+            <li>Strategic Foresight from advising founders and funds across growth and late-stage capital events.</li>
+            <li>Domain Depth in Healthcare, Lifesciences, FinTech, Consumer, and Digital.</li>
+            <li>Execution Expertise in M&amp;A, private placements, distressed assets, and capital advisory.</li>
+            <li>Investor-Operator Lens, as active LPs and angel investors in 30+ ventures.</li>
+          </ul>
         </div>
       </div>
 
@@ -249,7 +225,7 @@
               <h3>Siddhant Santani</h3>
               <p>Business Analyst</p>
               <div class="extra-info">
-                <span class="linkedin-icon">🔗</span>
+                <span class="linkedin-icon"><a href="underconstruction.html" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" /></a></span>
                 <span class="learn-more">Learn more</span>
               </div>
             </div>
@@ -266,7 +242,7 @@
               <h3>Divya Goyel</h3>
               <p>Legal and Compliance</p>
               <div class="extra-info">
-                <span class="linkedin-icon">🔗</span>
+                <span class="linkedin-icon"><a href="underconstruction.html" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" /></a></span>
                 <span class="learn-more">Learn more</span>
               </div>
             </div>
@@ -293,7 +269,7 @@
             <h3>Divya Goyel</h3>
             <p>Legal and Compliance</p>
             <div class="extra-info">
-              <span class="linkedin-icon">🔗</span>
+              <span class="linkedin-icon"><a href="underconstruction.html" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" /></a></span>
               <span class="learn-more">Learn more</span>
             </div>
           </div>
@@ -310,7 +286,7 @@
             <h3>Siddhant Santani</h3>
             <p>Business Analyst</p>
             <div class="extra-info">
-              <span class="linkedin-icon">🔗</span>
+              <span class="linkedin-icon"><a href="underconstruction.html" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" /></a></span>
               <span class="learn-more">Learn more</span>
             </div>
           </div>
@@ -327,7 +303,7 @@
             <h3>Siddarth Misra</h3>
             <p>Investment Analyst</p>
             <div class="extra-info">
-              <span class="linkedin-icon">🔗</span>
+              <span class="linkedin-icon"><a href="underconstruction.html" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" /></a></span>
               <span class="learn-more">Learn more</span>
             </div>
           </div>
@@ -435,7 +411,7 @@
         <!-- Footer Logo -->
         <div class="footer-logo">
           <img
-            src="assets/logo.png"
+            src="assets/logofooter.png"
             alt="LumenCap Logo"
             class="footer-logo-img"
           />
