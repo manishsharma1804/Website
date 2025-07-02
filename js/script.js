@@ -174,11 +174,13 @@ cards.forEach((card) => {
     modalDetails.textContent = card.dataset.detail;
     modalImg.src = card.querySelector("img").src;
     modal.style.display = "flex";
+    document.body.classList.add("modal-open");
   });
 });
 
 function closeModal() {
   modal.style.display = "none";
+  document.body.classList.remove("modal-open");
 }
 
 window.addEventListener("click", (e) => {
