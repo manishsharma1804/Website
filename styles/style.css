@@ -1384,7 +1384,6 @@ html:focus-within {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: #fff;
   border-radius: 6px;
   overflow: hidden;
   margin-right: 8px;
@@ -1695,54 +1694,48 @@ html:focus-within {
   }
 }
 
-.card-footer.green-footer {
-  background: #7cb342 !important;
-  color: #fff !important;
+/* Default card-footer: white background */
+.card-footer,
+.card-footer.green-footer,
+.card-footer:not(.green-footer) {
+  background: white !important;
+}
+.card-footer h3,
+.card-footer p,
+.card-footer .learn-more {
+  color: #323393 !important; /* blue for default */
 }
 .card-footer.green-footer h3,
 .card-footer.green-footer p,
 .card-footer.green-footer .learn-more {
+  color: #7cb342 !important; /* green for founders */
+}
+
+/* On hover: green or blue background, white text */
+.card:hover .card-footer.green-footer {
+  background: #7cb342 !important;
   color: #fff !important;
 }
-.card-footer.green-footer .extra-info .linkedin-icon {
-  background: #fff;
-  border: 1.5px solid #7cb342;
-  border-radius: 6px;
-  margin-right: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.card:hover .card-footer.green-footer h3,
+.card:hover .card-footer.green-footer p,
+.card:hover .card-footer.green-footer .learn-more {
+  color: #fff !important;
 }
-.card-footer.green-footer .extra-info .linkedin-icon img {
-  width: 24px;
-  height: 24px;
-  display: block;
+
+.card:hover .card-footer.green-footer .extra-info .linkedin-icon img {
   filter: none;
 }
 
-/* For Team section blue card footer */
-.card-footer:not(.green-footer) {
-  background: #323393;
-  color: #fff;
+.card:hover .card-footer:not(.green-footer) {
+  background: #323393 !important;
+  color: #fff !important;
 }
-.card-footer:not(.green-footer) h3,
-.card-footer:not(.green-footer) p,
-.card-footer:not(.green-footer) .learn-more {
-  color: #fff;
+.card:hover .card-footer:not(.green-footer) h3,
+.card:hover .card-footer:not(.green-footer) p,
+.card:hover .card-footer:not(.green-footer) .learn-more {
+  color: #fff !important;
 }
-.card-footer:not(.green-footer) .extra-info .linkedin-icon {
-  background: #fff;
-  border: 1.5px solid #323393;
-  border-radius: 6px;
-  margin-right: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.card-footer:not(.green-footer) .extra-info .linkedin-icon img {
-  width: 24px;
-  height: 24px;
-  display: block;
+.card:hover .card-footer:not(.green-footer) .extra-info .linkedin-icon img {
   filter: none;
 }
 
@@ -1866,4 +1859,14 @@ html:focus-within {
   .logo {
     margin-right: 0;
   }
+}
+
+/* Modal name/role color logic */
+.modal-header-text h2,
+.modal-header-text h4 {
+  color: #323393 !important; /* blue for default */
+}
+.modal-header-text.green-footer h2,
+.modal-header-text.green-footer h4 {
+  color: #7cb342 !important; /* green for founders */
 }

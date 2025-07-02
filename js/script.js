@@ -173,6 +173,13 @@ cards.forEach((card) => {
     modalRole.textContent = `(${card.dataset.role})`;
     modalDetails.textContent = card.dataset.detail;
     modalImg.src = card.querySelector("img").src;
+    // Set green-footer class on modal-header-text if card is founder
+    const modalHeaderText = document.querySelector('.modal-header-text');
+    if (card.querySelector('.card-footer').classList.contains('green-footer')) {
+      modalHeaderText.classList.add('green-footer');
+    } else {
+      modalHeaderText.classList.remove('green-footer');
+    }
     modal.style.display = "flex";
     document.body.classList.add("modal-open");
   });
