@@ -173,3 +173,13 @@ function closeModal() {
 window.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
+
+// Add close button functionality for mobile menu overlay
+const mobileMenuClose = document.getElementById("mobileMenuClose");
+if (mobileMenuClose) {
+  mobileMenuClose.addEventListener("click", function () {
+    mobileMenuToggle.classList.remove("active");
+    mobileMenuOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+}
