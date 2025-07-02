@@ -167,6 +167,8 @@ const modalRole = document.getElementById("modalRole");
 const modalDetails = document.getElementById("modalDetails");
 const modalImg = document.getElementById("modalImg");
 
+let scrollPosition = 0;
+
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     modalName.textContent = card.dataset.name;
@@ -181,6 +183,9 @@ cards.forEach((card) => {
       modalHeaderText.classList.remove('green-footer');
     }
     modal.style.display = "flex";
+    // Save scroll position and fix body
+    scrollPosition = window.scrollY;
+    document.body.style.top = `-${scrollPosition}px`;
     document.body.classList.add("modal-open");
   });
 });
@@ -188,6 +193,9 @@ cards.forEach((card) => {
 function closeModal() {
   modal.style.display = "none";
   document.body.classList.remove("modal-open");
+  // Restore scroll position
+  document.body.style.top = "";
+  window.scrollTo(0, scrollPosition);
 }
 
 window.addEventListener("click", (e) => {
