@@ -1507,7 +1507,7 @@ html:focus-within {
     align-items: center;
     text-align: center;
     width: 100%;
-    max-height: 90vh;
+    max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 1.5rem;
