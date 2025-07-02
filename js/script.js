@@ -73,7 +73,9 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-  const mobileNavLinks = document.querySelectorAll('.nav-menu-mobile a[href^="#"]');
+  const mobileNavLinks = document.querySelectorAll(
+    '.nav-menu-mobile a[href^="#"]'
+  );
 
   let current = "";
   sections.forEach((section) => {
