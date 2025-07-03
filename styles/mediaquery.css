@@ -178,7 +178,7 @@
   }
   .team-description {
     margin: 2rem 1rem;
-    padding: 2rem 2rem 0rem;
+    padding: 1rem 1rem 0rem;
   }
   .team-description-container {
     padding-left: 1rem;
@@ -672,7 +672,7 @@
 
 @media (max-width: 325px) {
   .green-footer {
-      min-height: 100px;
+    min-height: 100px;
   }
 }
 
@@ -686,15 +686,21 @@
     min-height: 55vh;
   }
 }
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 423px) and (max-width: 767px) {
   .team {
-    min-height: 50vh;
+    min-height: 40vh !important;
   }
+  .team-header h2 {
+    font-size: 1.8rem;
+}
+.team-description {
+  min-height: 108vh !important;
+}
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .team {
-    min-height: 69vh;
+    min-height: 50vh;
     padding: 2rem 4rem 4rem !important;
   }
 }
@@ -709,18 +715,18 @@
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: #323393;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   backdrop-filter: blur(2px);
-} 
+}
 @media (min-width: 320px) and (max-width: 767px) {
-  .team-swiper, .swiper, .swiper-wrapper {
+  .team-swiper,
+  .swiper,
+  .swiper-wrapper {
     width: auto !important;
-    
   }
 }
-

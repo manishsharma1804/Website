@@ -169,11 +169,30 @@ window.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  function isMobileOrTablet() {
-    return window.innerWidth <= 1024;
+function getDeviceType() {
+  const ua = navigator.userAgent;
+  if (/tablet|ipad|playbook|silk/i.test(ua)) {
+    return "tablet";
   }
+  if (
+    /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera Mini/i.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+}
 
+function isMobileOrTablet() {
+  const device = getDeviceType();
+  // Use both user agent and width for best accuracy
+  if (device === "mobile" || device === "tablet") return true;
+  if (window.innerWidth <= 1024) return true;
+  return false;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.card').forEach(function(card) {
     // Fill .card-details with data-detail if not already filled
     var details = card.querySelector('.card-details');

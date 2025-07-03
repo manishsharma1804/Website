@@ -257,7 +257,7 @@ html, body {
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
   position: fixed;
-  top: 70px; /* Adjust to match your header height */
+  top: 100px;
   right: 20px;
   width: 220px;
   height: auto;
@@ -370,19 +370,16 @@ html, body {
    ABOUT SECTION
    ========================= */
 .about {
-  padding: 8rem 3rem 6rem;
-  padding-top: 50px;
+  padding:  2rem;
   padding-bottom: 5px;
   background: white;
-  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
 .about-container {
-  margin: 20px auto;
   border-radius: 20px;
-  padding-top: 2rem;
+  padding-top: 2rem !important;
   padding: 4rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -397,7 +394,6 @@ html, body {
 
 .about-content {
   color: #333;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.2;
   margin-bottom: 4rem;
 }
@@ -517,10 +513,7 @@ html, body {
 /* =========================
    SERVICES SECTION
    ========================= */
-.services {
-  padding: 0;
-  min-height: 100vh;
-}
+
 
 .services-header {
   background: #7cb342;
@@ -539,13 +532,25 @@ html, body {
 
 .services-content {
   background: white;
-  padding: 4rem 2rem 6rem;
+  padding: 4rem 3rem 6rem;
   padding-bottom: 15px;
   min-height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .services-content {
+    padding-left: 1.5rem;
+  }
+  .team-header h2 {
+    padding-left: 1rem !important;
+  }
+  .team-header {
+    padding: 1rem 0rem 1rem  !important;
+}
+}
+
 
 /* Default: 3 columns for PC */
 .services-grid {
@@ -631,21 +636,35 @@ html, body {
 .team-description {
   background: white;
   border-radius: 20px;
-  padding: 8rem 4rem 6rem;
-  margin: 80px 2rem;
+  padding: 3rem 2rem 6rem;
+  margin: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  min-height: 155vh;
+  min-height: 90vh;
+}
+@media (min-width: 767px) and (max-width: 1025px) {
+  .team-description {
+    min-height: 85vh;
+  }
+
+  .team-description h2 {
+    font-size: clamp(1rem, 6vw, 4rem);
+    color: #7cb342;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .team-header h2 {
+    padding-left: 1rem !important;
+  }
 }
 
 .team-description-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 2rem;
 }
 
 .team-description h2 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(1rem, 6vw, 4rem);
   color: #7cb342;
   margin-bottom: 1rem;
 }
@@ -683,6 +702,7 @@ html, body {
   font-size: clamp(2.5rem, 6vw, 4rem);
   color: white;
   margin: 0;
+  padding-left: 10rem;
 }
 
 .team-content {
@@ -697,7 +717,6 @@ html, body {
   background: #323393 !important;
   padding: 6rem 4rem 0;
   color: white;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -912,7 +931,7 @@ html, body {
 }
 
 .footer-logo-img {
-  width: min(500px, 80vw);
+  width: min(350px, 80vw);
   margin: 0 auto;
   opacity: 0.95;
   transition: transform 0.3s ease;
@@ -1562,7 +1581,7 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   border: 3px solid #fff;
   border-radius: 12px;
   text-decoration: none;
-  margin: 0.5rem auto 0.2rem auto;
+  margin: 0.5rem 0.2rem auto;
   transition: box-shadow 0.2s, background 0.2s;
   box-shadow: 0 2px 12px rgba(50, 50, 100, 0.10);
 }
