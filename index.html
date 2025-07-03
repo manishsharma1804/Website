@@ -9,21 +9,24 @@
     <title>LumenCap Ventures - From Insight to Impact</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/mediaquery.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
 
   <body>
-    <!-- Loader Section -->
-    <div id="loader">
-      <img
-        src="assets/loader.png"
-        alt="LumenCap Logo"
-        class="loader-brand-logo"
-      />
-      <div class="loader-slogan">From Insight to Impact</div>
-    </div>
+    <div class="loader-overlay"><div class="loader"></div></div>
     <!-- Header Section -->
     <header class="header">
       <nav class="nav-container">
@@ -63,20 +66,23 @@
       <a href="#contact" class="cta-button">Strategic Advisory</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
+    <!-- Hero Carousel Section -->
+    <div class="hero-carousel">
+      <img class="hero-slide active" src="assets/bg.png" alt="Hero Image 1" />
+      <img class="hero-slide" src="assets/hero2.jpg" alt="Hero Image 2" />
+      <img class="hero-slide" src="assets/hero3.jpg" alt="Hero Image 3" />
+      <img class="hero-slide" src="assets/hero4.jpg" alt="Hero Image 4" />
+      <div class="hero-image-overlay"></div>
+      <div class="hero-overlay-content">
         <h1>
           Empowering Visionaries<br />
           Unlocking Capital<br />
           Creating Value.
         </h1>
         <div class="hero-underline"></div>
-        <div class="hero-buttons">
-          <a href="#services" class="hero-btn glass-button">Know More</a>
-        </div>
+        <button class="hero-btn">Know more</button>
       </div>
-    </section>
+    </div>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -317,53 +323,54 @@
       <!-- Founders Section -->
       <div class="founders-section-inside">
         <h2>Meet Our Founders</h2>
-        <div class="founders-container">
-          <div
-            class="card"
-            data-name="Siddhant Santani"
-            data-role="Business Analyst"
-            data-detail="Siddhant Santani is a Business Analyst focused on driving data-based decisions for startup operations and scaling strategies. He specializes in BI dashboards and performance optimization."
-          >
-            <img src="assets/founder.png" alt="Siddhant Santani"/>
-            <div class="card-footer green-footer">
-              <h3>Siddhant Santani</h3>
-              <p>Business Analyst</p>
-              <div class="extra-info">
-                <span class="linkedin-icon"
-                  ><a
-                    href="underconstruction.html"
+        <div class="swiper founders-swiper">
+          <div class="swiper-wrapper founders-container">
+            <div
+              class="swiper-slide card"
+              data-name="Siddhant Santani"
+              data-role="Business Analyst"
+              data-detail="Siddhant Santani is a Business Analyst focused on driving data-based decisions for startup operations and scaling strategies. He specializes in BI dashboards and performance optimization."
+            >
+              <img src="assets/founder.png" alt="Siddhant Santani" />
+              <div class="card-details" style="display: none"></div>
+              <div class="card-footer green-footer">
+                <h3>Siddhant Santani</h3>
+                <p>Business Analyst</p>
+                <div class="extra-info">
+                  <a
+                    href="https://www.linkedin.com/in/username"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><img
-                      src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                      alt="LinkedIn" /></a
-                ></span>
-                <span class="learn-more">Learn more</span>
+                    class="linkedin-icon"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <span class="learn-more">Learn more</span>
+                </div>
               </div>
             </div>
-          </div>
+            
 
-          <div
-            class="card"
-            data-name="Divya Goyel"
-            data-role="Legal and compliance"
-            data-detail="Specializes in legal advisory for startups and growth-stage companies, with focus on funding mandates, term sheets, shareholder agreements, and incorporation. Previously served as Legal Advisor at WE Hub Foundation, ensuring compliance for early-stage ventures and drafting key frameworks including MOUs, employee policies, and POSH guidelines."
-          >
-            <img src="assets/founder.png" alt="Divya Goyel" />
-            <div class="card-footer green-footer">
-              <h3>Divya Goyel</h3>
-              <p>Legal and Compliance</p>
-              <div class="extra-info">
-                <span class="linkedin-icon"
-                  ><a
-                    href="underconstruction.html"
+            <div
+              class="swiper-slide card"
+              data-name="Divya Goyel"
+              data-role="Legal and compliance"
+              data-detail="Specializes in legal advisory for startups and growth-stage companies, with focus on funding mandates, term sheets, shareholder agreements, and incorporation. Previously served as Legal Advisor at WE Hub Foundation, ensuring compliance for early-stage ventures and drafting key frameworks including MOUs, employee policies, and POSH guidelines."
+            >
+              <img src="assets/founder.png" alt="Divya Goyel" />
+              <div class="card-details" style="display: none"></div>
+              <div class="card-footer green-footer">
+                <h3>Divya Goyel</h3>
+                <p>Legal and Compliance</p>
+                <div class="extra-info">
+                  <a
+                    href="https://www.linkedin.com/in/username"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><img
-                      src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                      alt="LinkedIn" /></a
-                ></span>
-                <span class="learn-more">Learn more</span>
+                    class="linkedin-icon"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <span class="learn-more">Learn more</span>
+                </div>
               </div>
             </div>
           </div>
@@ -377,78 +384,78 @@
         <h2>Team</h2>
       </div>
 
-      <div class="team-container">
-        <div
-          class="card"
-          data-name="Divya Goyel"
-          data-role="Legal and compliance"
-          data-detail="Specializes in legal advisory for startups and growth-stage companies, with focus on funding mandates, term sheets, shareholder agreements, and incorporation. Previously served as Legal Advisor at WE Hub Foundation, ensuring compliance for early-stage ventures and drafting key frameworks including MOUs, employee policies, and POSH guidelines.\n\nAs an AIF Banyan Impact Fellow, led a Micro Enterprise Incubation Unit supporting women entrepreneurs and helping formalize micro-enterprises within inclusive startup ecosystems.\n\nBrings a legal and policy-driven approach to each engagement, helping founders and investors navigate regulatory and operational complexities across early and growth-stage businesses."
-        >
-          <img src="assets/team.png" alt="Divya Goyel" />
-          <div class="card-footer">
-            <h3>Divya Goyel</h3>
-            <p>Legal and Compliance</p>
-            <div class="extra-info">
-              <span class="linkedin-icon"
-                ><a
-                  href="underconstruction.html"
+      <div class="swiper team-swiper">
+        <div class="swiper-wrapper team-container">
+          <div
+            class="swiper-slide card"
+            data-name="Divya Goyel"
+            data-role="Legal and compliance"
+            data-detail="Specializes in legal advisory for startups and growth-stage companies, with focus on funding mandates, term sheets, shareholder agreements, and incorporation. Previously served as Legal Advisor at WE Hub Foundation, ensuring compliance for early-stage ventures and drafting key frameworks including MOUs, employee policies, and POSH guidelines.\n\nAs an AIF Banyan Impact Fellow, led a Micro Enterprise Incubation Unit supporting women entrepreneurs and helping formalize micro-enterprises within inclusive startup ecosystems.\n\nBrings a legal and policy-driven approach to each engagement, helping founders and investors navigate regulatory and operational complexities across early and growth-stage businesses."
+          >
+            <img src="assets/team.png" alt="Divya Goyel" />
+            <div class="card-details" style="display: none"></div>
+            <div class="card-footer">
+              <h3>Divya Goyel</h3>
+              <p>Legal and Compliance</p>
+              <div class="extra-info">
+                <a
+                  href="https://www.linkedin.com/in/username"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                    alt="LinkedIn" /></a
-              ></span>
-              <span class="learn-more">Learn more</span>
+                  class="linkedin-icon"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <span class="learn-more">Learn more</span>
+              </div>
             </div>
           </div>
-        </div>
+          
 
-        <div
-          class="card"
-          data-name="Siddhant Santani"
-          data-role="Business Analyst"
-          data-detail="Siddhant Santani is a Business Analyst focused on driving data-based decisions for startup operations and scaling strategies. He specializes in BI dashboards and performance optimization."
-        >
-          <img src="assets/team.png" alt="Siddhant Santani" />
-          <div class="card-footer">
-            <h3>Siddhant Santani</h3>
-            <p>Business Analyst</p>
-            <div class="extra-info">
-              <span class="linkedin-icon"
-                ><a
-                  href="underconstruction.html"
+          <div
+            class="swiper-slide card"
+            data-name="Siddhant Santani"
+            data-role="Business Analyst"
+            data-detail="Siddhant Santani is a Business Analyst focused on driving data-based decisions for startup operations and scaling strategies. He specializes in BI dashboards and performance optimization."
+          >
+            <img src="assets/team.png" alt="Siddhant Santani" />
+            <div class="card-details" style="display: none"></div>
+            <div class="card-footer">
+              <h3>Siddhant Santani</h3>
+              <p>Business Analyst</p>
+              <div class="extra-info">
+                <a
+                  href="https://www.linkedin.com/in/username"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                    alt="LinkedIn" /></a
-              ></span>
-              <span class="learn-more">Learn more</span>
+                  class="linkedin-icon"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <span class="learn-more">Learn more</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="card"
-          data-name="Siddarth Misra"
-          data-role="Investment Analyst"
-          data-detail="Siddarth Misra analyzes market trends and evaluates investment opportunities in early-stage startups. He works closely with VCs and founders to assess valuation and business sustainability."
-        >
-          <img src="assets/team.png" alt="Siddarth Misra" />
-          <div class="card-footer">
-            <h3>Siddarth Misra</h3>
-            <p>Investment Analyst</p>
-            <div class="extra-info">
-              <span class="linkedin-icon"
-                ><a
-                  href="underconstruction.html"
+          <div
+            class="swiper-slide card"
+            data-name="Siddarth Misra"
+            data-role="Investment Analyst"
+            data-detail="Siddarth Misra analyzes market trends and evaluates investment opportunities in early-stage startups. He works closely with VCs and founders to assess valuation and business sustainability."
+          >
+            <img src="assets/team.png" alt="Siddarth Misra" />
+            <div class="card-details" style="display: none"></div>
+            <div class="card-footer">
+              <h3>Siddarth Misra</h3>
+              <p>Investment Analyst</p>
+              <div class="extra-info">
+                <a
+                  href="https://www.linkedin.com/in/username"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                    alt="LinkedIn" /></a
-              ></span>
-              <span class="learn-more">Learn more</span>
+                  class="linkedin-icon"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <span class="learn-more">Learn more</span>
+              </div>
             </div>
           </div>
         </div>
@@ -527,18 +534,12 @@
           <div class="linkedin-section">
             <h4>Connect with us<br />on LinkedIn</h4>
             <a
-              href="https://www.linkedin.com/company/lumencap/"
+              href="https://www.linkedin.com/in/username"
               target="_blank"
-              class="linkedin-icon"
-              tabindex="0"
-              style="margin-top: 1rem"
+              rel="noopener noreferrer"
+              class="footer-linkedin-icon"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                alt="LinkedIn"
-                width="30"
-                height="30"
-              />
+              <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </div>
         </div>
@@ -549,16 +550,12 @@
             >Connect with us<br />on Linkedin</span
           >
           <a
-            href="https://www.linkedin.com/company/lumencap/"
+            href="https://www.linkedin.com/in/username"
             target="_blank"
+            rel="noopener noreferrer"
             class="mobile-linkedin-icon"
           >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-              alt="LinkedIn"
-              width="36"
-              height="36"
-            />
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
 
@@ -576,6 +573,7 @@
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

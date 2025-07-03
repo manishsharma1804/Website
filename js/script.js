@@ -1,15 +1,3 @@
-//Loader
-const loader = document.getElementById("loader");
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.classList.add("fade-out");
-    document.body.classList.add("loaded");
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 600);
-  }, 2000); // 2 seconds delay for testing
-});
-
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
@@ -169,27 +157,6 @@ const modalImg = document.getElementById("modalImg");
 
 let scrollPosition = 0;
 
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    modalName.textContent = card.dataset.name;
-    modalRole.textContent = `(${card.dataset.role})`;
-    modalDetails.textContent = card.dataset.detail;
-    modalImg.src = card.querySelector("img").src;
-    // Set green-footer class on modal-header-text if card is founder
-    const modalHeaderText = document.querySelector('.modal-header-text');
-    if (card.querySelector('.card-footer').classList.contains('green-footer')) {
-      modalHeaderText.classList.add('green-footer');
-    } else {
-      modalHeaderText.classList.remove('green-footer');
-    }
-    modal.style.display = "flex";
-    // Save scroll position and fix body
-    scrollPosition = window.scrollY;
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.classList.add("modal-open");
-  });
-});
-
 function closeModal() {
   modal.style.display = "none";
   document.body.classList.remove("modal-open");
@@ -200,4 +167,116 @@ function closeModal() {
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  function isMobileOrTablet() {
+    return window.innerWidth <= 1024;
+  }
+
+  document.querySelectorAll('.card').forEach(function(card) {
+    // Fill .card-details with data-detail if not already filled
+    var details = card.querySelector('.card-details');
+    if (details && !details.textContent.trim()) {
+      details.textContent = card.getAttribute('data-detail') || '';
+    }
+
+    // Card click handler
+    card.addEventListener('click', function(e) {
+      // If learn-more was clicked, let its handler run
+      if (e.target.classList.contains('learn-more')) return;
+      if (isMobileOrTablet()) {
+        // Toggle expand/collapse
+        card.classList.toggle('expanded');
+      } else {
+        // Desktop: open modal (simulate click on learn-more)
+        var learnMore = card.querySelector('.learn-more');
+        if (learnMore) learnMore.click();
+      }
+    });
+
+    // Learn more click handler
+    var learnMore = card.querySelector('.learn-more');
+    if (learnMore) {
+      learnMore.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Your existing modal open logic here
+        // Example: openProfileModal(card)
+        if (typeof openProfileModal === 'function') {
+          openProfileModal(card);
+        }
+      });
+    }
+  });
+});
+
+function openProfileModal(card) {
+  modalName.textContent = card.dataset.name;
+  modalRole.textContent = `(${card.dataset.role})`;
+  modalDetails.textContent = card.dataset.detail;
+  modalImg.src = card.querySelector("img").src;
+  // Set green-footer class on modal-header-text if card is founder
+  const modalHeaderText = document.querySelector('.modal-header-text');
+  if (card.querySelector('.card-footer').classList.contains('green-footer')) {
+    modalHeaderText.classList.add('green-footer');
+  } else {
+    modalHeaderText.classList.remove('green-footer');
+  }
+  modal.style.display = "flex";
+  // Save scroll position and fix body
+  scrollPosition = window.scrollY;
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.classList.add("modal-open");
+}
+
+// Hero carousel logic
+const heroSlides = document.querySelectorAll('.hero-slide');
+let heroIndex = 0;
+const heroInterval = 8000; // 8 seconds
+
+function showHeroSlide(idx) {
+  heroSlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === idx);
+  });
+}
+
+setInterval(() => {
+  heroIndex = (heroIndex + 1) % heroSlides.length;
+  showHeroSlide(heroIndex);
+}, heroInterval);
+
+// Show the first slide on load
+showHeroSlide(heroIndex);
+
+// Loader fade-out logic
+window.addEventListener("load", () => {
+  const loaderOverlay = document.querySelector('.loader-overlay');
+  if (loaderOverlay) {
+    setTimeout(() => {
+      loaderOverlay.style.transition = 'opacity 0.5s';
+      loaderOverlay.style.opacity = '0';
+      setTimeout(() => loaderOverlay.remove(), 500);
+    }, 4000); // 4 seconds for testing
+  }
+});
+
+// Swiper: 2 cards per view on mobile, 3 on tablet/PC
+const teamSwiper = new Swiper('.team-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 24,
+  freeMode: true,
+  breakpoints: {
+    601: { slidesPerView: 3 },
+    1025: { slidesPerView: 3 }
+  }
+});
+
+const foundersSwiper = new Swiper('.founders-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 24,
+  freeMode: true,
+  breakpoints: {
+    601: { slidesPerView: 3 },
+    1025: { slidesPerView: 3 }
+  }
 });
