@@ -695,6 +695,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .team {
     min-height: 69vh;
+    padding: 2rem 4rem 4rem !important;
   }
 }
 
@@ -722,3 +723,4 @@
     
   }
 }
+
