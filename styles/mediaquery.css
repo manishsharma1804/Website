@@ -216,6 +216,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .card img {
+    max-height: 220px;
+  }
+  .modal-header-row img {
+    max-height: 220px;
+  }
+}
+
 @media (max-width: 480px) {
   .header {
     padding: 0.8rem 1rem;
@@ -278,6 +287,12 @@
   .founder-image,
   .team-image {
     height: 250px;
+  }
+  .card img {
+    max-height: 150px;
+  }
+  .modal-header-row img {
+    max-height: 150px;
   }
 }
 
@@ -684,4 +699,4 @@
   .team {
     min-height: 70vh;
   }
-} 
+}

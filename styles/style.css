@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -23,7 +23,7 @@ body.modal-open {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: #323393;
   display: flex;
   flex-direction: column;
@@ -935,6 +935,8 @@ html:focus-within {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 260px;
+  object-fit: cover;
 }
 
 .card-footer {
@@ -1042,26 +1044,26 @@ html:focus-within {
   width: 90%;
   max-width: 800px;
   max-height: 90vh;
-  overflow-y: auto; /* Vertical scroll */
+  overflow-y: auto;
   overflow-x: hidden;
   padding: 2rem;
   border-radius: 12px;
   display: flex;
-  flex-direction: row; /* default for desktop */
+  flex-direction: column;
   gap: 2rem;
   position: relative;
   animation: slideUp 0.3s ease;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
+@media (min-width: 768px) {
+  .modal-content {
+    flex-direction: row;
+    align-items: flex-start;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+}
+
+#modalDetails {
+  color: #323393;
 }
 
 .modal-content img {
@@ -1156,11 +1158,10 @@ html:focus-within {
     position: relative;
   }
   .modal-header-row img {
-    width: 70px;
-    height: 85px;
+    max-height: 260px;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    flex-shrink: 0;
+    display: block;
   }
   .modal-header-text h2 {
     font-size: 1.1rem;
@@ -1235,6 +1236,9 @@ html:focus-within {
   }
   .team-description h2 {
     font-size: clamp(1.7rem, 6vw, 4rem) !important;
+  }
+  .card img {
+    max-height: 200px;
   }
 }
 
@@ -1566,4 +1570,32 @@ html:focus-within {
   font-size: clamp(1rem, 2.5vw, 1.1rem);
   color: #323393;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .card img {
+    max-height: 150px;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.modal-header-text h2 {
+  font-size: clamp(1rem, 4vw, 1.15rem);
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.modal-header-text h4 {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  font-weight: 500;
+  margin: 0.1rem 0 0 0;
+  line-height: 1.3;
+  opacity: 1;
+  transition: opacity 0.3s;
+  color: #666;
 }
