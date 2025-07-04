@@ -325,7 +325,6 @@
     z-index: 10;
     text-decoration: none !important;
   }
-
 }
 @media (max-width: 360px) {
   /* Example tweaks */
@@ -396,10 +395,10 @@
 }
 @media (max-width: 380px) {
   .sector-section h2 {
-      font-size: 1.6rem !important;
-      margin-bottom: 0rem !important;
-      padding-left: 0;
-      text-align: center;
+    font-size: 1.6rem !important;
+    margin-bottom: 0rem !important;
+    padding-left: 0;
+    text-align: center;
   }
 }
 
@@ -407,7 +406,7 @@
   body {
     font-size: 0.95rem;
   }
-  .about-content{
+  .about-content {
     font-size: 0.8rem;
   }
   .about-content p {
@@ -441,7 +440,8 @@
     margin-bottom: 0;
     padding-left: 1rem;
   }
-  .team-description-content ul, .team-description-content li {
+  .team-description-content ul,
+  .team-description-content li {
     font-size: 0.8rem;
     color: #323393;
     font-weight: 500;
@@ -525,7 +525,7 @@
   }
   .sector-section h2 {
     font-size: 1.6rem !important;
-    margin-bottom: 1rem  !important;
+    margin-bottom: 1rem !important;
     padding-left: 0;
     text-align: center;
   }
@@ -546,14 +546,14 @@
     max-height: 200px;
   }
   .card-footer h3 {
-    font-size:0.8rem !important;
+    font-size: 0.8rem !important;
     font-weight: 600;
     margin: 0 !important;
     line-height: 1.2;
     letter-spacing: 0.01em !important;
   }
   .card-footer p {
-    font-size:0.65rem !important;
+    font-size: 0.65rem !important;
     font-weight: 500;
     margin: 0 !important;
     line-height: 1.3;
@@ -568,19 +568,18 @@
     margin-bottom: 0rem;
     font-weight: 600;
     line-height: 75.15px;
-    color: #8BC73E;
+    color: #8bc73e;
   }
 }
 @media (max-width: 380px) {
   .team-description h2 {
-      font-size: 1.4rem !important;
-      margin-bottom: 0rem;
-      font-weight: 600;
-      line-height: 75.15px;
-      color: #8BC73E;
+    font-size: 1.4rem !important;
+    margin-bottom: 0rem;
+    font-weight: 600;
+    line-height: 75.15px;
+    color: #8bc73e;
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .team-container {
@@ -791,10 +790,10 @@
   }
   .team-header h2 {
     font-size: 1.8rem;
-}
-.team-description {
-  min-height: 95vh !important;
-}
+  }
+  .team-description {
+    min-height: 95vh !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -858,6 +857,7 @@
 @media (min-width: 378px) and (max-width: 405px) {
   .service-card {
     max-width: 160px;
+    padding-left: 2rem;
   }
   .team {
     min-height: 45vh !important;
