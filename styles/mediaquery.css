@@ -730,3 +730,14 @@
     width: auto !important;
   }
 }
+
+@media (min-width: 801px) and (max-width: 1025px) {
+  .nav-menu {
+    display: none !important;
+  }
+  .nav-menu-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
