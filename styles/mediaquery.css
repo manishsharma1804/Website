@@ -854,3 +854,12 @@
     font-size: 2rem;
   }
 }
+
+@media (min-width: 378px) and (max-width: 405px) {
+  .service-card {
+    max-width: 160px;
+  }
+  .team {
+    min-height: 45vh !important;
+  }
+}
