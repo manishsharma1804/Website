@@ -129,16 +129,6 @@ window.addEventListener("resize", function () {
   }, 1);
 });
 
-// Prevent horizontal scroll on mobile
-document.addEventListener(
-  "touchmove",
-  function (e) {
-    if (e.touches.length > 1) {
-      e.preventDefault();
-    }
-  },
-  { passive: false }
-);
 
 // Handle orientation change
 window.addEventListener("orientationchange", function () {

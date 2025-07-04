@@ -336,7 +336,7 @@ html, body {
 }
 
 .hero-underline {
-  width: 90px;
+  width: 400px;
   height: 6px;
   background: #7cb342;
   border-radius: 3px;
@@ -407,10 +407,10 @@ html, body {
 @media (max-width: 600px) {
   /* Who We Are heading */
   .about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0rem;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 95.15px;
-    letter-spacing: -3%;
+    line-height: 75.15px;
     color: #8BC73E;
   }
   /* Who We Are content */
@@ -999,7 +999,7 @@ html, body {
 .card-footer {
   background: white;
   padding: 0.4rem;
-  color: #1f2c4c;
+  color: #0623f7;
   transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
@@ -1400,7 +1400,7 @@ html, body {
 }
 @media (max-width: 325px) {
   .green-footer {
-    min-height: 100px;
+    min-height: 60px;
   }
 }
 /* Section-specific overrides for team-description-content */
@@ -1519,35 +1519,10 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   color: #fff;
   line-height: 1.15;
   letter-spacing: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0.9rem 0;
   text-align: left;
   text-shadow: 0 2px 12px rgba(0,0,0,0.25);
   max-width: 700px;
-}
-
-.hero-overlay-content .hero-btn, 
-.hero-overlay-content button {
-  background: #444a58;
-  color: #fff;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.9rem 2.2rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  transition: background 0.2s;
-}
-.hero-overlay-content .hero-btn:hover, 
-.hero-overlay-content button:hover {
-  background: #323393;
-}
-
-@media (max-width: 600px) {
-  .hero-overlay-content {
-    padding-left: 1rem;
-  }
 }
 
 .hero-image-overlay {
@@ -1630,10 +1605,6 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   .hero {
     padding: 0 !important;
     min-width: 0 !important;
-  }
-  .hero-overlay-content {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
   .loader-overlay {
     left: 0 !important;
@@ -1729,6 +1700,16 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
     padding: 4rem 0rem 6rem;
     margin-left: 10rem;
     margin-right: 10rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .learn-more {
+    font-size: 0.5rem;
+  }
+  .linkedin-icon i.fa-brands.fa-linkedin-in {
+    color: #fff !important;
+    font-size: 1rem;
   }
 }
 
