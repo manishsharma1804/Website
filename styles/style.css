@@ -992,7 +992,7 @@ html, body {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 220px;
+  max-height: 260px;
   object-fit: cover;
 }
 
@@ -1001,7 +1001,6 @@ html, body {
   padding: 0.4rem;
   color: #1f2c4c;
   transition: all 0.3s ease;
-  min-height: 85px;
   overflow: hidden;
   position: relative;
 }
@@ -1469,10 +1468,8 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
 
 @media (max-width: 900px) {
   .service-card {
-    width: 40vw;
-    height: 35vw;
-    padding-top: 50px;
-    justify-content: start;
+    width: 80vw;
+    height: 70vw;
     max-width: 350px;
     max-height: 350px;
   }
@@ -1732,17 +1729,6 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
     padding: 4rem 0rem 6rem;
     margin-left: 10rem;
     margin-right: 10rem;
-  }
-}
-
-@media (max-width: 321px) {
-  .services-content {
-      padding-left: 1.3rem
-  }
-}
-@media (max-width: 375px) {
-  .services-content {
-      padding-left: 1.5rem
   }
 }
 
