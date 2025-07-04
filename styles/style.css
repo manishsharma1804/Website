@@ -1315,6 +1315,14 @@ html, body {
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1145px) {
+  .services-content {
+    padding: 4rem 0rem 6rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
 @media (min-width: 1025px) {
 
   .founders-container {
@@ -1707,6 +1715,22 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
 
 .card-footer.green-footer {
   color: #7cb342 !important;
+}
+
+@media (min-width: 1439px) {
+  .services-content {
+    padding: 4rem 0rem 6rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+@media (width: 1024px) {
+  .services-content {
+    padding: 4rem 0rem 6rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 }
 
 
