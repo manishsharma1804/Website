@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -20,7 +20,8 @@ body.modal-open {
   width: 100vw;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -48,7 +49,7 @@ html, body {
   animation: l15 1s infinite linear;
 }
 .loader::before,
-.loader::after {    
+.loader::after {
   content: "";
   grid-area: 1/1;
   margin: 2px;
@@ -60,8 +61,10 @@ html, body {
   margin: 8px;
   animation-duration: 3s;
 }
-@keyframes l15{ 
-  100%{transform: rotate(1turn)}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 /* =========================
@@ -370,7 +373,7 @@ html, body {
    ABOUT SECTION
    ========================= */
 .about {
-  padding:  2rem;
+  padding: 2rem;
   padding-bottom: 5px;
   background: white;
   display: flex;
@@ -411,16 +414,17 @@ html, body {
     margin-bottom: 0rem;
     font-weight: 600;
     line-height: 75.15px;
-    color: #8BC73E;
+    color: #8bc73e;
   }
   /* Who We Are content */
-  .about-content, .about-content p {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  .about-content,
+  .about-content p {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 10px;
     line-height: 16px;
     letter-spacing: -3%;
-    color: #2E3192;
+    color: #2e3192;
   }
 }
 
@@ -514,7 +518,6 @@ html, body {
    SERVICES SECTION
    ========================= */
 
-
 .services-header {
   background: #7cb342;
   text-align: center;
@@ -546,8 +549,8 @@ html, body {
     padding-left: 1rem !important;
   }
   .team-header {
-    padding: 1rem 0rem 1rem  !important;
-}
+    padding: 1rem 0rem 1rem !important;
+  }
 }
 
 @media (min-width: 388px) and (max-width: 420px) {
@@ -946,23 +949,26 @@ html, body {
   width: 100%;
   overflow-x: auto;
 }
-.team-container, .founders-container {
+.team-container,
+.founders-container {
   display: flex;
   flex-direction: row;
   padding-bottom: 1rem;
   align-items: flex-start;
 }
-.team-container .card, .founders-container .card {
+.team-container .card,
+.founders-container .card {
   flex: 0 0 calc(50% - 1rem);
 }
 @media (min-width: 768px) {
-  .team-container .card, .founders-container .card {
+  .team-container .card,
+  .founders-container .card {
     flex: 0 0 calc(33.333% - 1rem);
   }
 }
 /* Only align left if overflowing */
-.card-scroll-outer:has(.team-container > .card:nth-child(n+4)),
-.card-scroll-outer:has(.founders-container > .card:nth-child(n+4)) {
+.card-scroll-outer:has(.team-container > .card:nth-child(n + 4)),
+.card-scroll-outer:has(.founders-container > .card:nth-child(n + 4)) {
   /* For 3+ cards (PC/tab), align left */
   .team-container,
   .founders-container {
@@ -999,7 +1005,7 @@ html, body {
 .card-footer {
   background: white;
   padding: 0.4rem;
-  color: #0623f7;
+  color: #2e3192;
   transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
@@ -1323,7 +1329,6 @@ html, body {
 }
 
 @media (min-width: 1025px) {
-
   .founders-container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -1417,8 +1422,50 @@ html, body {
   }
 }
 
-h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-footer, .service-card, .sector-card, .team-description-content, .modal-content, .cta-button, .glass-button, .about-content, .tagline, .nav-menu a, .nav-menu-mobile a, .footer-logo .logo-text, .footer-logo .tagline, .card-details, .learn-more, .extra-info, .modal-header-text, .team-header h2, .team-description h2, .about h2, .services h2, .sector-section h2, .contact-info h4, .linkedin-section h4, .mobile-linkedin-text, .modal-text h2, .modal-text h4, .modal-text p, .card-footer h3, .card-footer p, .service-card h3, .service-card p, .sector-card h3, .team-description-content ul, .team-description-content li {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-overlay-content h1,
+.hero-overlay-content,
+.card-footer,
+.service-card,
+.sector-card,
+.team-description-content,
+.modal-content,
+.cta-button,
+.glass-button,
+.about-content,
+.tagline,
+.nav-menu a,
+.nav-menu-mobile a,
+.footer-logo .logo-text,
+.footer-logo .tagline,
+.card-details,
+.learn-more,
+.extra-info,
+.modal-header-text,
+.team-header h2,
+.team-description h2,
+.about h2,
+.services h2,
+.sector-section h2,
+.contact-info h4,
+.linkedin-section h4,
+.mobile-linkedin-text,
+.modal-text h2,
+.modal-text h4,
+.modal-text p,
+.card-footer h3,
+.card-footer p,
+.service-card h3,
+.service-card p,
+.sector-card h3,
+.team-description-content ul,
+.team-description-content li {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 
 .modal-header-text h2 {
@@ -1446,7 +1493,7 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   color: #323393;
   font-size: 0.98rem;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 2px 8px rgba(50,51,147,0.08);
+  box-shadow: 0 2px 8px rgba(50, 51, 147, 0.08);
   margin-top: 0.5rem;
   padding: 1rem 1.2rem;
   transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -1481,8 +1528,6 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   flex: auto;
 }
 
-
-
 .hero-carousel {
   position: relative;
   width: 100%;
@@ -1491,7 +1536,10 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
 }
 .hero-slide {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease;
@@ -1503,7 +1551,10 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
 }
 .hero-overlay-content {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -1513,7 +1564,7 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
 }
 
 .hero-overlay-content h1 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: clamp(2.2rem, 6vw, 3.5rem);
   font-weight: 600;
   color: #fff;
@@ -1521,13 +1572,16 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   letter-spacing: 0;
   margin: 0 0 0.9rem 0;
   text-align: left;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   max-width: 700px;
 }
 
 .hero-image-overlay {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(30, 40, 60, 0.45);
   z-index: 2;
   pointer-events: none;
@@ -1558,7 +1612,8 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   display: inline-block;
 }
 
-.footer-linkedin-icon, .mobile-linkedin-icon {
+.footer-linkedin-icon,
+.mobile-linkedin-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1570,31 +1625,40 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   text-decoration: none;
   margin: 0.5rem 0.2rem auto;
   transition: box-shadow 0.2s, background 0.2s;
-  box-shadow: 0 2px 12px rgba(50, 50, 100, 0.10);
+  box-shadow: 0 2px 12px rgba(50, 50, 100, 0.1);
 }
-.footer-linkedin-icon i.fa-brands.fa-linkedin-in, .mobile-linkedin-icon i.fa-brands.fa-linkedin-in {
+.footer-linkedin-icon i.fa-brands.fa-linkedin-in,
+.mobile-linkedin-icon i.fa-brands.fa-linkedin-in {
   color: #fff;
   font-size: 2.2rem;
   background: none;
   border: none;
   padding: 0;
 }
-.footer-linkedin-icon:hover, .mobile-linkedin-icon:hover {
+.footer-linkedin-icon:hover,
+.mobile-linkedin-icon:hover {
   box-shadow: 0 4px 24px rgba(50, 50, 100, 0.18);
   background: #2540a0;
 }
 
 @media (max-width: 600px) {
-  .footer-linkedin-icon, .mobile-linkedin-icon {
+  .footer-linkedin-icon,
+  .mobile-linkedin-icon {
     width: 40px;
     height: 40px;
   }
-  .footer-linkedin-icon i.fa-brands.fa-linkedin-in, .mobile-linkedin-icon i.fa-brands.fa-linkedin-in {
+  .footer-linkedin-icon i.fa-brands.fa-linkedin-in,
+  .mobile-linkedin-icon i.fa-brands.fa-linkedin-in {
     font-size: 1.3rem;
   }
 }
 
-.main-content, .services-grid, .team-container, .founders-container, .about-container, .contact-container {
+.main-content,
+.services-grid,
+.team-container,
+.founders-container,
+.about-container,
+.contact-container {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -1641,14 +1705,14 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
     grid-template-columns: 1fr;
     gap: 12px;
   }
-    .service-card {
-        width: 95vw;
-        height: auto;
-        min-height: 180px;
-        max-width: 330px;
-        aspect-ratio: unset;
-        padding: 16px 8px 16px 12px;
-    }
+  .service-card {
+    width: 95vw;
+    height: auto;
+    min-height: 180px;
+    max-width: 330px;
+    aspect-ratio: unset;
+    padding: 16px 8px 16px 12px;
+  }
   .service-card h3 {
     font-size: 1rem;
   }
@@ -1657,7 +1721,7 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
   }
 }
 @media (max-width: 320px) {
-  .service-card{
+  .service-card {
     max-width: 290px;
   }
 }
@@ -1712,6 +1776,3 @@ h1, h2, h3, h4, h5, h6, .hero-overlay-content h1, .hero-overlay-content, .card-f
     font-size: 1rem;
   }
 }
-
-
-
