@@ -3168,6 +3168,14 @@ h6,
     font-size: 2.2rem !important;
   }
 }
+@media (min-width: 300px) and (max-width:319px) {
+    .service-card {
+        max-width: 250px;
+    }
+        .services-content {
+        padding-left: 2rem;
+    }
+}
 
 /* Media Queries for .swiper-free-mode>.swiper-wrapper 
 
