@@ -227,7 +227,7 @@ body {
 
 .nav-menu a {
   text-decoration: none;
-  color: #0623f7;
+  color: #323393;
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -239,7 +239,7 @@ body {
 
 .nav-menu-mobile a {
   text-decoration: none;
-  color: #0623f7;
+  color: #323393;
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -2440,7 +2440,7 @@ h6,
   .nav-menu-mobile a {
     display: block;
     text-align: center;
-    color: #0623f7;
+    color: #323393;
     font-weight: 700;
     font-size: 1.2rem;
     transition: color 0.3s;
