@@ -516,7 +516,7 @@
     margin: 0;
     margin-top: 0.5rem;
     font-size: 0.95rem;
-    color: #333;
+    color: #323393;
     max-height: calc(70vh - 100px);
     padding-right: 0.5rem;
   }
@@ -646,6 +646,9 @@
   .hero-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  .team {
+    min-height: 70vh !important;
   }
 }
 
@@ -874,3 +877,98 @@
         padding-left: 2rem;
     }
   }
+
+  .swiper-free-mode>.swiper-wrapper {
+margin: auto !important;
+  }
+
+@media (min-width: 1440px) and (max-width: 2800px) {
+    .team {
+        min-height: 50vh !important;
+    }
+}
+@media (min-width: 2559px){
+  .team {
+      min-height: 25vh !important;
+  }
+  .team-description {
+    min-height: 30vh !important;
+}
+.contact-container,.about-container,
+.team-description-container {
+  max-width: 80%;
+}
+.services-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+}
+/* Font sizes for large screens */
+h1 {
+  font-size: 3.5rem !important;
+}
+h2 {
+  font-size: 2.8rem !important;
+}
+h3 {
+  font-size: 2.2rem !important;
+}
+h4 {
+  font-size: 1.8rem !important;
+}
+p {
+  font-size: 1.3rem !important;
+}
+.hero-btn {
+  font-size: 1.4rem !important;
+}
+.cta-button {
+  font-size: 1.2rem !important;
+}
+.service-card h3 {
+  font-size: 1.6rem !important;
+}
+.service-card p {
+  font-size: 1.1rem !important;
+}
+.card-footer h3 {
+  font-size: 1.5rem !important;
+}
+.card-footer p {
+  font-size: 1.2rem !important;
+}
+.quote-text {
+  font-size: 2.2rem !important;
+}
+}
+
+/* Media Queries for .swiper-free-mode>.swiper-wrapper 
+
+@media (max-width: 320px) {
+    .swiper-free-mode>.swiper-wrapper {
+
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .swiper-free-mode>.swiper-wrapper {
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .swiper-free-mode>.swiper-wrapper {
+
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .swiper-free-mode>.swiper-wrapper {
+
+    }
+}
+
+@media (min-width: 1025px) {
+    .swiper-free-mode>.swiper-wrapper {
+
+    }
+}  */
