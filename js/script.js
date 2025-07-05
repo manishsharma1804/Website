@@ -261,9 +261,9 @@ showHeroSlide(heroIndex);
 window.addEventListener("load", () => {
   const loaderOverlay = document.querySelector('.loader-overlay');
   if (loaderOverlay) {
-    loaderOverlay.style.transition = 'opacity 0.5s';
-    loaderOverlay.style.opacity = '0';
-    setTimeout(() => loaderOverlay.remove(), 500);
+      loaderOverlay.style.transition = 'opacity 0.5s';
+      loaderOverlay.style.opacity = '0';
+      setTimeout(() => loaderOverlay.remove(), 500);
   }
 });
 
