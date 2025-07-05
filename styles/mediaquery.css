@@ -884,7 +884,7 @@ margin: auto !important;
 
 @media (min-width: 1440px) and (max-width: 2800px) {
     .team {
-        min-height: 50vh !important;
+        min-height: 75vh !important;
     }
 }
 @media (min-width: 2559px){
