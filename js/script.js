@@ -261,13 +261,21 @@ showHeroSlide(heroIndex);
 window.addEventListener("load", () => {
   const loaderOverlay = document.querySelector('.loader-overlay');
   if (loaderOverlay) {
-    setTimeout(() => {
-      loaderOverlay.style.transition = 'opacity 0.5s';
-      loaderOverlay.style.opacity = '0';
-      setTimeout(() => loaderOverlay.remove(), 500);
-    }, 4000); // 4 seconds for testing
+    loaderOverlay.style.transition = 'opacity 0.5s';
+    loaderOverlay.style.opacity = '0';
+    setTimeout(() => loaderOverlay.remove(), 500);
   }
 });
+
+// Fallback timeout in case page takes too long to load
+setTimeout(() => {
+  const loaderOverlay = document.querySelector('.loader-overlay');
+  if (loaderOverlay) {
+    loaderOverlay.style.transition = 'opacity 0.5s';
+    loaderOverlay.style.opacity = '0';
+    setTimeout(() => loaderOverlay.remove(), 500);
+  }
+}, 8000); // 8 seconds fallback
 
 // Swiper: 2 cards per view on mobile, 3 on tablet/PC
 const teamSwiper = new Swiper('.team-swiper', {
